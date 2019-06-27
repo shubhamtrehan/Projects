@@ -19,7 +19,7 @@ X_test = sc_X.transform(X_test)
 sc_y = StandardScaler()
 y_train = sc_y.fit_transform(y_train.reshape(-1,1))
 
-# Fitting Simple Linear Regression to the Training set
+## Fitting Simple Linear Regression to the Training set
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
@@ -32,17 +32,17 @@ poly_reg.fit(X_poly, y)
 lin_reg_2 = LinearRegression()
 lin_reg_2.fit(X_poly, y)
 
-# Fitting SVR to the dataset
+## Fitting SVR to the dataset
 from sklearn.svm import SVR
 regressor = SVR(kernel = 'rbf')
 regressor.fit(X, y)
 
-# Fitting Decision Tree Regression to the dataset
+## Fitting Decision Tree Regression to the dataset
 from sklearn.tree import DecisionTreeRegressor
 regressor = DecisionTreeRegressor(random_state = 0)
 regressor.fit(X, y)
 
-# Fitting Random Forest Regression to the dataset
+## Fitting Random Forest Regression to the dataset
 from sklearn.ensemble import RandomForestRegressor
 regressor = RandomForestRegressor(n_estimators = 10, random_state = 0)
 regressor.fit(X, y)
